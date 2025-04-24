@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Search Donors</h1> <br> <br>
+    <a href="{% url 'home' %}">Home</a> <br> <br>
+
+    {% for i in users %}
+    <h3>Name: {{i.name}}</h3>
+    <p>Blood Group: {{i.bloodgroup}}</p>
+    <p>Location: {{i.location}}</p>
+    <p>Phone Number: {{i.phonenumber}}</p>
+    {% endfor %}
+</body>
+</html>
