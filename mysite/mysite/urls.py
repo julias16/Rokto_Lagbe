@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +28,7 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('searchdonors/', views.searchdonors, name='searchdonors'),
     path('signup/', views.signup, name='signup'),
+
 
     path(' ', include('users.urls')),
 ]
