@@ -22,5 +22,7 @@ from .views import user_login
 
 urlpatterns = [
     path('signup/', views.signup, name='signup'),
-    path('login/', user_login, name='login'),
+    path('login/', views.user_login, name='login'),
+    path('bloodreq/', views.blood_request_view, name='bloodreq'),
 ]
+

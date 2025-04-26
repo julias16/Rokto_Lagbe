@@ -9,3 +9,10 @@ class UserForm(forms.ModelForm):
         fields = '__all__'
 
 
+from .models import BloodRequest
+
+class BloodRequestForm(forms.ModelForm):
+    class Meta:
+        model = BloodRequest
+        fields = ['blood_group', 'location', 'description']
+

@@ -5,7 +5,35 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Blood Request</h1> <br> <br>
+<!--<h1>Blood Request</h1> <br> <br>-->
     <a href="{% url 'home' %}">Home</a>
+
+<h2>Request for Blood</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Request Blood</button>
+</form>
+
+<hr>
+
+<h2>Recent Blood Requests</h2>
+<ul>
+    {% for request in blood_requests %}
+        <li>
+            <strong>{{ request.blood_group }}</strong> needed at
+            <strong>{{ request.location }}</strong><br>
+            Description: {{ request.description }}<br>
+            Requested at: {{ request.requested_at|date:"M d, Y H:i" }}
+        </li>
+    {% empty %}
+        <li>No blood requests yet.</li>
+    {% endfor %}
+</ul>
+
+
+
+
+
 </body>
 </html>

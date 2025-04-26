@@ -44,4 +44,19 @@ def user_login(request):
     return render(request, 'login.html')
 
 
+from django.shortcuts import render, redirect
+from .forms import BloodRequestForm
+from .models import BloodRequest
 
+def blood_request_view(request):
+    if request.method == 'POST':
+        form = BloodRequestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('bloodreq')  # this name must match your url name
+    # Redirect to the same page after POST
+    else:
+        form = BloodRequestForm()
+
+    blood_requests = BloodRequest.objects.order_by('-requested_at')
+    return render(request, 'bloodreq.html', {'form': form, 'blood_requests': blood_requests})
