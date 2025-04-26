@@ -1,5 +1,9 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from .forms import UserForm
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.contrib.auth.models import User
 
 
 def signup(request):
@@ -12,6 +16,32 @@ def signup(request):
         form = UserForm()
     return render(request, 'signup.html', {'form': form})
 
+
+def user_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        # Debugging: print username and password to check if they are received
+        print(f"Trying to authenticate with username: {username}, password: {password}")
+
+        # Authenticate user with provided credentials
+        user = authenticate(request, username=username, password=password)
+
+        # Debugging: check the authenticate result
+        print(f"Authenticate result: {user}")
+
+        if user is not None:
+            if user.is_active:  # Ensure the user is active
+                login(request, user)  # Log the user in
+                messages.success(request, 'Logged in successfully!')
+                return redirect('home')  # Redirect to home/dashboard page
+            else:
+                messages.error(request, 'Your account is disabled. Please contact support.')
+        else:
+            messages.error(request, 'Invalid username or password.')
+
+    return render(request, 'login.html')
 
 
 

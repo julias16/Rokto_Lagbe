@@ -5,8 +5,29 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Login</h1> <br> <br>
-    <a href="{% url 'home' %}">Home</a>
+<!--<h1>Login</h1> <br> <br>-->
+<!--    <a href="{% url 'home' %}">Home</a>-->
+
+<!-- login.html -->
+<form method="post">
+    {% csrf_token %}
+    <label>Username:</label>
+    <input type="text" name="username" required><br>
+
+    <label>Password:</label>
+    <input type="password" name="password" required><br>
+
+    <button type="submit">Login</button>
+</form>
+
+{% if messages %}
+  {% for message in messages %}
+    <p style="color:red;">{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
+
+
 
 
 

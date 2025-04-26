@@ -5,6 +5,7 @@ class User(models.Model):
     userid = models.AutoField(primary_key=True)
     usertype = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
+    username = models.CharField(max_length=100, null=True)
     email = models.EmailField()
     password = models.CharField(max_length=100)
     phonenumber = models.CharField(max_length=100)
