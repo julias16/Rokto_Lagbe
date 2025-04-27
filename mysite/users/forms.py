@@ -1,6 +1,5 @@
 from django import forms
 from .models import User
-from django.contrib.auth.forms import AuthenticationForm
 
 
 class UserForm(forms.ModelForm):
@@ -15,4 +14,5 @@ class BloodRequestForm(forms.ModelForm):
     class Meta:
         model = BloodRequest
         fields = '__all__'
+
 

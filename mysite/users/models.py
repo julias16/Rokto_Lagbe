@@ -25,3 +25,5 @@ class BloodRequest(models.Model):
 
     def __str__(self):
         return f"{self.blood_group} needed at {self.location}"
+
+

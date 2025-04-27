@@ -1,48 +1,42 @@
-from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
-from .forms import UserForm
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
-from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
+from django.contrib.auth import login, logout
+from .middlewares import auth, guest
+# Create your views here.
 
-
-def signup(request):
+@guest
+def register_view(request):
     if request.method == 'POST':
-        form = UserForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
-             form.save()
-             return redirect('/')
+            user = form.save()
+            login(request,user)
+            return redirect('dashboard')
     else:
-        form = UserForm()
-    return render(request, 'signup.html', {'form': form})
+        initial_data = {'username':'', 'password1':'','password2':""}
+        form = UserCreationForm(initial=initial_data)
+    return render(request, 'signup.html',{'form':form})
 
-
-def user_login(request):
+@guest
+def login_view(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request,user)
+            return redirect('dashboard')
+    else:
+        initial_data = {'username':'', 'password':''}
+        form = AuthenticationForm(initial=initial_data)
+    return render(request, 'login.html',{'form':form})
 
-        # Debugging: print username and password to check if they are received
-        print(f"Trying to authenticate with username: {username}, password: {password}")
+@auth
+def dashboard_view(request):
+    return render(request, 'dashboard.html')
 
-        # Authenticate user with provided credentials
-        user = authenticate(request, username=username, password=password)
-
-        # Debugging: check the authenticate result
-        print(f"Authenticate result: {user}")
-
-        if user is not None:
-            if user.is_active:  # Ensure the user is active
-                login(request, user)  # Log the user in
-                messages.success(request, 'Logged in successfully!')
-                return redirect('home')  # Redirect to home/dashboard page
-            else:
-                messages.error(request, 'Your account is disabled. Please contact support.')
-        else:
-            messages.error(request, 'Invalid username or password.')
-
-    return render(request, 'login.html')
-
+def logout_view(request):
+    logout(request)
+    return redirect('login')
 
 from django.shortcuts import render, redirect
 from .forms import BloodRequestForm
@@ -60,3 +54,6 @@ def blood_request_view(request):
 
     blood_requests = BloodRequest.objects.order_by('-requested_at')
     return render(request, 'bloodreq.html', {'form': form, 'blood_requests': blood_requests})
+
+
+
