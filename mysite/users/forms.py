@@ -14,5 +14,5 @@ from .models import BloodRequest
 class BloodRequestForm(forms.ModelForm):
     class Meta:
         model = BloodRequest
-        fields = ['blood_group', 'location', 'description']
+        fields = '__all__'
 

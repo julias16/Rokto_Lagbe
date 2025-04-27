@@ -21,9 +21,11 @@
 <ul>
     {% for request in blood_requests %}
         <li>
+            Name: {{ request.name }} <br>
             <strong>{{ request.blood_group }}</strong> needed at
             <strong>{{ request.location }}</strong><br>
             Description: {{ request.description }}<br>
+            Phone Number: {{ request.phonenumber }}<br>
             Requested at: {{ request.requested_at|date:"M d, Y H:i" }}
         </li>
     {% empty %}
