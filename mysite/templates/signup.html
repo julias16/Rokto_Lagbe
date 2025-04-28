@@ -1,35 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-</head>
-<body>
 {% extends 'layouts/app.html' %}
 
 {% block content %}
 
+<a href="{% url 'home' %}">Home</a>
+
 <div class="row justify-content-center">
     <div class="col-sm-6">
         <h2 class="text-muted">Register</h2>
-        <form method="POST" action="{% url 'register' %}">
+        <form method="POST" action="{% url 'signup' %}">
             {% csrf_token %}
             <div class="form-group">
-                <label for="{{ form.username.id_for_label}}">Username:</label>
+                <label>Name:</label>
+                <input type="text" name="{{ form.name.name }}" class="form-control" value="{{ form.name.value}}" />
+                {% if form.name.errors %}
+                <span class="text-danger">{{ form.name.errors }}</span>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label>Username:</label>
                 <input type="text" name="{{ form.username.name }}" class="form-control" value="{{ form.username.value}}" />
                 {% if form.username.errors %}
                 <span class="text-danger">{{ form.username.errors }}</span>
                 {% endif %}
             </div>
 
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="text" name="{{ form.email.name }}" class="form-control" value="{{ form.email.value}}" />
+                {% if form.email.errors %}
+                <span class="text-danger">{{ form.email.errors }}</span>
+                {% endif %}
+            </div>
 
             <div class="form-group">
-                <label for="{{ form.password1.id_for_label}}">Password:</label>
+                <label>Blood Group:</label>
+                <input type="text" name="{{ form.blood_group.name }}" class="form-control" value="{{ form.blood_group.value}}" />
+                {% if form.blood_group.errors %}
+                <span class="text-danger">{{ form.blood_group.errors }}</span>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="text" name="{{ form.phonenumber.name }}" class="form-control" value="{{ form.phonenumber.value}}" />
+                {% if form.phonenumber.errors %}
+                <span class="text-danger">{{ form.phonenumber.errors }}</span>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label>Location:</label>
+                <input type="text" name="{{ form.location.name }}" class="form-control" value="{{ form.location.value}}" />
+                {% if form.location.errors %}
+                <span class="text-danger">{{ form.location.errors }}</span>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label>Password:</label>
                 <input type="password" name="{{ form.password1.name }}" class="form-control" value="{{ form.password1.value}}" />
                 <span class="text-danger">{{ form.password1.errors }}</span>
             </div>
             <div class="form-group">
-                <label for="{{ form.password2.id_for_label}}">Re-Type Password:</label>
+                <label>Re-Type Password:</label>
                 <input type="password" name="{{ form.password2.name }}" class="form-control" value="{{ form.password2.value}}" />
                 <span class="text-danger">{{ form.password2.errors }}</span>
             </div>
@@ -44,6 +78,12 @@
 
 {% endblock %}
 
-</body>
-</html>
 
+<!--<a href="{% url 'home' %}">Home</a> <br>-->
+
+<!--<h1>Signup</h1>-->
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+<!--        {{ form.as_p }}-->
+<!--        <button type="submit">Signup</button>-->
+<!--    </form>-->
