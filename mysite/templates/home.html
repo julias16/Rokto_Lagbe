@@ -1,19 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <h1 class="page-heading">রক্ত লাগবে</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <div class="nav-container">
         <a href="index.html" class="nav-btn">Home</a>
         <a href="#search" class="nav-btn">Search Donors</a>
         <a href="#request" class="nav-btn">Blood Request</a>
-        <a href="reg.html" class="nav-btn">Register</a>
+        <a href="reg.html" class="nav-btn">Sign-up</a>
         <a href="login.html" class="nav-btn">Login</a>
         <a href="#about" class="nav-btn">About Us</a>
         <a href="#contact" class="nav-btn">Contact/SMS</a>
@@ -21,7 +25,15 @@
 
     <!-- Welcome Section -->
     <div class="main-content">
-        <h2>Welcome to Our Blood Bank</h2>
+
+        <h2>
+            <i class="fas fa-tint blood-icon-start"></i>
+            Welcome to Our Blood Bank
+            <i class="fas fa-tint blood-icon-end"></i>
+        </h2>
+
+
+
         <p>Find Life Saving Blood Donors Easily. Join Us To Save Lives and be a Hero!</p>
     </div>
 <!-- Left Side Quote Section -->
@@ -113,6 +125,16 @@
         <p>We are a non-profit organization connecting blood donors with patients in need. Our mission is to make blood donation simple, accessible, and life-saving for everyone.</p>
     </section>
 
+
+<div class="donate-info">
+    <h3>SIGNIFICANCE OF DONATING BLOOD</h3>
+    <p>Donating blood is significantly important because it's the only way to save lives in a way that can't be replicated. Blood is essential for various medical procedures and treatments, and there's no artificial substitute. It's crucial for managing blood loss in surgeries, trauma, and chronic illnesses like cancer, ensuring a consistent supply of blood products for patients. Donating blood also has potential health benefits for the donor, including a reduced risk of heart disease and cancer. </p>
+</div>
+
+<div class="blood-request">
+    <!-- Your existing blood request content here -->
+</div>
+
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contact Us / Send SMS</h2>
@@ -122,12 +144,12 @@
         <button class="contact-btn">Send SMS</button>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
+        <div class="donor-day-banner">
+            <span class="donor-icon">🩸</span>
+            WORLD BLOOD DONOR DAY — <strong>14 JUNE</strong>
+        </div>
         <p>Need help? Contact us at <a href="mailto:support@bloodbank.com">রক্ত_লাগবে@bloodbank.com</a></p>
         <p>&copy; 2025 Blood Bank Project</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
