@@ -1,0 +1,367 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('../images/Screenshot 2025-04-14 041733.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.page-heading {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 32px;
+    color: #ec2323;
+    font-weight: bold;
+}
+
+.nav-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #f42a41;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
+
+.nav-btn:hover {
+    background-color: #d92636;
+}
+.main-content {
+    margin-top: 30px; /* Decrease this value to move it upwards */
+    text-align: center;
+    background-color: transparent;
+    padding: 50px;
+    width: 85%;
+    max-width: 700px;
+
+    animation: fadeIn 1.5s ease-in-out;
+    transform: translateX(-10px);
+    border: none;
+    border-radius: 0;
+}
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content h2 {
+    color: #ec2323;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.main-content p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.left-quote {
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    width: 320px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #201d1d;
+    line-height: 1.5;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.quote-underline {
+    margin-top: 10px;
+    width: 300px; /* Width of the underline */
+    height: 4px;  /* Thickness of the underline */
+    background-color: #db2a2a; /* Same blood red color */
+    border-radius: 2px; /* Slightly rounded edges */
+    animation: slideIn 1s ease-out;
+}
+
+/* Optional: Smooth slide-in animation for underline */
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+
+
+/* Blood Icon Section */
+/* .blood-icon {
+    margin-top: 50px;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+} */
+
+/* .blood-img {
+    width: 150px;
+    height: auto;
+    animation: bounce 2s infinite; /* Adding some bounce animation */
+*/
+
+/* Bounce Animation */
+/* @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+} */
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #f42a41;
+    text-decoration: underline;
+}
+
+/* Make it mobile responsive */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .main-content {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    .main-content h2 {
+        font-size: 30px;
+    }
+
+    .main-content p {
+        font-size: 16px;
+    }
+}
+.section {
+    margin-top: 60px;
+    text-align: center;
+    padding: 40px 20px;
+    color: #000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.search-btn, .request-btn, .contact-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #f42a41;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover, .request-btn:hover, .contact-btn:hover {
+    background-color: #d92636;
+}
+.search-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-form label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.search-form select {
+    margin-top: 5px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-form .search-btn {
+    margin-top: 20px;
+}
+/* Flex container for both sections */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px; /* Add padding around */
+    margin: 0 auto; /* Center the content in the page */
+    max-width: 1200px; /* Set a max width for better alignment */
+}
+
+.donate-info {
+    position: relative;
+    left: -400px; /* Moves the section 20px to the left */
+    width: 48%;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 15px;
+    /* background-color: #f8f8f8; */
+    /* border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+
+.donate-info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e60000; /* Red color for the heading */
+    margin-bottom: 10px;
+}
+
+.donate-info p {
+    color: #333;
+}
+
+.blood-request {
+    width: 48%; /* Adjusted width for better fit */
+    padding: 15px;
+    /* background-color: #f8f8f8; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+
+    .donate-info, .blood-request {
+        width: 100%; /* Full width for each section */
+        margin-bottom: 20px; /* Add spacing between stacked sections */
+    }
+}
+.donate-info ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.donate-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+.donor-day-banner {
+    background-color: #f42a41;
+    color: white;
+    padding: 25px 30px;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donor-day-banner .donor-icon {
+    font-size: 34px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+    }
+}
+
+.donor-day-banner {
+    animation: pulse 3s infinite;
+}
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.blood-icon-start, .blood-icon-end {
+    color: #e60000;
+    font-size: 36px;
+    margin: 0 10px;
+}
+
+.blood-icon-start {
+    margin-right: 20px; /* Extra space before the text */
+}
+
+.blood-icon-end {
+    margin-left: 20px; /* Extra space after the text */
+}
