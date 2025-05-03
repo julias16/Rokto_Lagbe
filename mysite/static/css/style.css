@@ -243,20 +243,19 @@ body {
     margin: 0 auto; /* Center the content in the page */
     max-width: 1200px; /* Set a max width for better alignment */
 }
-
 .donate-info {
     position: relative;
-    left: -400px; /* Moves the section 20px to the left */
-    width: 48%;
+    /* left: -400px; */  /* Remove or comment this out */
+    width: 85%;
+    max-width: 800px;
+    margin: 0 auto; /* This centers the block */
     font-size: 18px;
     line-height: 1.6;
     padding: 15px;
     text-align: center;
-    /* background-color: #f8f8f8; */
-    /* border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
     animation: fadeIn 2s ease-in-out;
 }
+
 
 
 
@@ -362,4 +361,80 @@ h2 {
 
 .blood-icon-end {
     margin-left: 20px; /* Extra space after the text */
+}
+.upper-footer-container {
+    background: linear-gradient(135deg, rgba(244, 42, 65, 0.8), rgba(0, 36, 62, 0.8)); /* Gradient background */
+    color: white;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 3px solid #ffd700; /* Golden border to highlight the section */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it covers full screen width */
+    position: relative;
+    z-index: 1; /* Ensure the background is above any other content */
+}
+
+.footer-section {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 100px; /* Add this line to move the sections slightly to the right */
+}
+
+.footer-section h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+    transform: translateX(5px); /* Slight movement on hover */
+}
+
+@media (max-width: 768px) {
+    .upper-footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0; /* Add some padding for smaller screens */
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-left: 0; /* Reset margin for mobile view */
+    }
+}
+.donor-day-banner a {
+    color: #020202; /* You can choose any color here */
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.donor-day-banner a:hover {
+    color: #000000; /* Optional: color when hovered */
 }
