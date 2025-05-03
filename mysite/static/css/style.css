@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: url('../images/Screenshot 2025-04-14 041733.png') no-repeat center center fixed;
+    background: url('../images/—Pngtree—world blood donor day background_1742555.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@ body {
     top: 20px;
     left: 30px;
     font-size: 32px;
-    color: #ec2323;
+    color: whitesmoke;
     font-weight: bold;
 }
 
@@ -74,21 +74,19 @@ body {
 }
 
 .main-content h2 {
-    color: #ec2323;
+    color: wheat;
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .main-content p {
-    color: #333;
+    color: whitesmoke;
     font-size: 18px;
     line-height: 1.6;
     font-weight: 500;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .left-quote {
@@ -99,10 +97,9 @@ body {
     font-size: 24px;
     font-weight: bold;
     font-style: italic;
-    color: #201d1d;
+    color: navajowhite;
     line-height: 1.5;
     animation: fadeIn 2s ease-in-out;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .quote-underline {
@@ -254,6 +251,7 @@ body {
     font-size: 18px;
     line-height: 1.6;
     padding: 15px;
+    text-align: center;
     /* background-color: #f8f8f8; */
     /* border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
@@ -265,12 +263,12 @@ body {
 .donate-info h3 {
     font-size: 24px;
     font-weight: bold;
-    color: #e60000; /* Red color for the heading */
+    color: ghostwhite;/* Red color for the heading */
     margin-bottom: 10px;
 }
 
 .donate-info p {
-    color: #333;
+    color: papayawhip;
 }
 
 .blood-request {
@@ -301,7 +299,7 @@ body {
 .donate-info ul li {
     margin-bottom: 10px;
     font-size: 16px;
-    color: #333;
+    color: navajowhite;
 }
 .donor-day-banner {
     background-color: #f42a41;

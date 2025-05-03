@@ -14,13 +14,14 @@
 
 
     <div class="nav-container">
-        <a href="home.html" class="nav-btn">Home</a>
-        <a href="#search" class="nav-btn">Search Donors</a>
-        <a href="#request" class="nav-btn">Blood Request</a>
-        <a href="reg.html" class="nav-btn">Sign-up</a>
-        <a href="login.html" class="nav-btn">Login</a>
-        <a href="#about" class="nav-btn">About Us</a>
-        <a href="#contact" class="nav-btn">Contact/SMS</a>
+        <a href="{% url 'home' %}" class="nav-btn">Home</a>
+        <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
+        <a href="{% url 'bloodreq' %}" class="nav-btn">Blood Request</a>
+        <a href="{% url 'signup' %}" class="nav-btn">Sign Up</a>
+        <a href="{% url 'login' %}" class="nav-btn">Login</a>
+        <a href="{% url 'aboutus' %}" class="nav-btn">About Us</a>
+        <a href="{% url 'contactus' %}" class="nav-btn">Contact Us</a>
+        <a href="{% url 'dashboard' %}" class="nav-btn">Dashboard</a>
     </div>
 
     <!-- Welcome Section -->
@@ -36,57 +37,8 @@
 
         <p>Find Life Saving Blood Donors Easily. Join Us To Save Lives and be a Hero!</p>
     </div>
-<!-- Left Side Quote Section -->
-<div class="left-quote">
-    <p>"THE GIFT OF BLOOD IS THE GIFT OF LIFE."</p>
-    <p>"DONATE TODAY, SAVE A LIFE TOMORROW!"</p>
-    <div class="quote-underline"></div> <!-- This is the block underline -->
-</div>
 
 
-
-   <!-- Search Donors Section -->
-<section id="search" class="section">
-    <h2>Search for Blood Donors</h2>
-    <p>Find donors quickly based on blood group, district, and donor type.</p>
-
-    <form class="search-form">
-        <label for="blood-group">Blood Group:</label>
-        <select id="blood-group" name="blood-group">
-            <option value="">Select Blood Group</option>
-            <option value="A+">A+</option>
-            <option value="A-">A-</option>
-            <option value="B+">B+</option>
-            <option value="B-">B-</option>
-            <option value="O+">O+</option>
-            <option value="O-">O-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
-        </select>
-
-        <label for="district">District:</label>
-        <select id="district" name="district">
-            <option value="">Select District</option>
-            <option value="Dhaka">Dhaka</option>
-            <option value="Chattogram">Chattogram</option>
-            <option value="Khulna">Khulna</option>
-            <option value="Rajshahi">Rajshahi</option>
-            <option value="Barisal">Barisal</option>
-            <option value="Sylhet">Sylhet</option>
-            <option value="Rangpur">Rangpur</option>
-            <option value="Mymensingh">Mymensingh</option>
-        </select>
-
-        <label for="donor-type">Donor Type:</label>
-        <select id="donor-type" name="donor-type">
-            <option value="">Select Donor Type</option>
-            <option value="voluntary">Voluntary</option>
-            <option value="professional">Professional</option>
-        </select>
-
-        <button type="submit" class="search-btn">Search</button>
-    </form>
-</section>
 
 
 <div class="donate-info">
@@ -100,12 +52,6 @@
 
 
 
-    <!-- Blood Request Section -->
-    <section id="request" class="section">
-        <h2>Request Blood</h2>
-        <p>Need urgent blood? Request easily through our platform.</p>
-        <button class="request-btn">Request Blood</button>
-    </section>
 
     <div class="donate-info">
         <h3>WHO CAN DONATE BLOOD?</h3>
@@ -119,37 +65,19 @@
     </div>
 
 
-    <!-- About Us Section -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>We are a non-profit organization connecting blood donors with patients in need. Our mission is to make blood donation simple, accessible, and life-saving for everyone.</p>
-    </section>
-
 
 <div class="donate-info">
     <h3>SIGNIFICANCE OF DONATING BLOOD</h3>
     <p>Donating blood is significantly important because it's the only way to save lives in a way that can't be replicated. Blood is essential for various medical procedures and treatments, and there's no artificial substitute. It's crucial for managing blood loss in surgeries, trauma, and chronic illnesses like cancer, ensuring a consistent supply of blood products for patients. Donating blood also has potential health benefits for the donor, including a reduced risk of heart disease and cancer. </p>
 </div>
 
-<div class="blood-request">
-    <!-- Your existing blood request content here -->
-</div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Us / Send SMS</h2>
-        <p>For any help or emergency, contact us directly.</p>
-        <p><strong>Email:</strong> রক্ত_লাগবে@bloodbank.com</p>
-        <p><strong>Phone:</strong> +8801814407255</p>
-        <button class="contact-btn">Send SMS</button>
-    </section>
+<div class="donor-day-banner">
+            <span class="donor-icon">🩸</span>
+            WORLD BLOOD DONOR DAY | 14 JUNE <br>
+         <a href="https://www.who.int/campaigns/world-blood-donor-day">Learn More</a>
+ </div>
 
     <footer class="footer">
-        <div class="donor-day-banner">
-            <span class="donor-icon">🩸</span>
-            WORLD BLOOD DONOR DAY — <strong>14 JUNE</strong>
-
-        </div>
         <p>Need help? Contact us at <a href="mailto:support@bloodbank.com">রক্ত_লাগবে@bloodbank.com</a></p>
         <p>&copy; 2025 Blood Bank Project</p>
     </footer>
