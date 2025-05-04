@@ -1,12 +1,26 @@
-{% extends 'layouts/app.html' %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 
-{% block content %}
+<nav class="nav-container">
+    <a href="{% url 'home' %}" class="nav-btn">Home</a>
+    <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
+    <a href="{% url 'bloodreq' %}" class="nav-btn">Blood Request</a>
+    <a href="{% url 'signup' %}" class="nav-btn">Sign Up</a>
+    <a href="{% url 'aboutus' %}" class="nav-btn">About Us</a>
+    <a href="{% url 'contactus' %}" class="nav-btn">Contact Us</a>
+    <a href="{% url 'dashboard' %}" class="nav-btn">Dashboard</a>
+</nav>
 
-<a href="{% url 'home' %}" class="btn btn-default">Home</a>
 
 <div class="row justify-content-center">
     <div class="col-sm-6">
-        <h2 class="text-muted">Login</h2>
+
+
+        <h2 class="text-muted">Login to Rokto Lagbe</h2>
 
         {% if form.non_field_errors %}
         <small class="text-danger">
@@ -17,28 +31,39 @@
         <form method="POST" action="{% url 'login' %}">
             {% csrf_token %}
             <div class="form-group">
-                <label>Username:</label>
-                <input type="text" name="{{ form.username.name }}" class="form-control" value="{{ form.username.value}}" />
+                <label for="username">Username:</label>
+                <input
+                    id="username"
+                    type="text"
+                    name="{{ form.username.name }}"
+                    class="form-control"
+                    value="{{ form.username.value }}"
+                    placeholder="Enter your username"
+                />
                 {% if form.username.errors %}
                 <span class="text-danger">{{ form.username.errors }}</span>
                 {% endif %}
             </div>
 
-
             <div class="form-group">
-                <label>Password:</label>
-                <input type="password" name="{{ form.password.name }}" class="form-control" value="{{ form.password.value}}" />
+                <label for="password">Password:</label>
+                <input
+                    id="password"
+                    type="password"
+                    name="{{ form.password.name }}"
+                    class="form-control"
+                    value="{{ form.password.value }}"
+                    placeholder="Enter your password"
+                />
+                {% if form.password.errors %}
                 <span class="text-danger">{{ form.password.errors }}</span>
+                {% endif %}
             </div>
-
 
             <button type="submit" class="btn btn-dark">Login</button>
 
-            <a href="{% url 'signup' %}" class="btn btn-default">Create a new account</a>
-
-
+            <a href="{% url 'signup' %}" class="btn btn-default">Create a New Account</a>
         </form>
     </div>
 </div>
 
-{% endblock %}

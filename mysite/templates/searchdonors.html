@@ -1,25 +1,42 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Donors List</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <a href="{% url 'home' %}">Home</a> <br> <br>
 
-    <h2>Search Donors</h2>
-<ul>
-    {% for donor in donors %}
-        <li>
-            <strong>Name:</strong> {{ donor.name }}<br>
-            <strong>Blood Group:</strong> {{ donor.blood_group }}<br>
-            <strong>Phone:</strong> {{ donor.phone }}<br>
-            <strong>Location:</strong> {{ donor.location }}
-        </li>
-    {% empty %}
-        <li>No donors available.</li>
-    {% endfor %}
-</ul>
+
+<nav class="nav-container">
+    <a href="{% url 'home' %}" class="nav-btn">Home</a>
+    <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
+    <a href="{% url 'bloodreq' %}" class="nav-btn">Blood Request</a>
+    <a href="{% url 'signup' %}" class="nav-btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="nav-btn">Login</a>
+    <a href="{% url 'aboutus' %}" class="nav-btn">About Us</a>
+    <a href="{% url 'contactus' %}" class="nav-btn">Contact Us</a>
+    <a href="{% url 'dashboard' %}" class="nav-btn">Dashboard</a>
+</nav>
+
+<h2>Donors List</h2>
+        <ul class="donor-list">
+            {% for i in users %}
+                <li class="donor-card">
+                    <strong>Name:</strong> {{ i.name }}<br>
+                    <strong>Blood Group:</strong> {{ i.blood_group }}<br>
+                    <strong>Phone Number:</strong> {{ i.phonenumber }}<br>
+                    <strong>Location:</strong> {{ i.location }}
+                </li>
+            {% empty %}
+                <li>No donors available.</li>
+            {% endfor %}
+
+
+
+        </ul>
 
 </body>
 </html>

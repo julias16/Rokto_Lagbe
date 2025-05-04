@@ -243,19 +243,20 @@ body {
     margin: 0 auto; /* Center the content in the page */
     max-width: 1200px; /* Set a max width for better alignment */
 }
+
 .donate-info {
     position: relative;
-    /* left: -400px; */  /* Remove or comment this out */
-    width: 85%;
-    max-width: 800px;
-    margin: 0 auto; /* This centers the block */
+    left: -400px; /* Moves the section 20px to the left */
+    width: 48%;
     font-size: 18px;
     line-height: 1.6;
     padding: 15px;
     text-align: center;
+    /* background-color: #f8f8f8; */
+    /* border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
     animation: fadeIn 2s ease-in-out;
 }
-
 
 
 
@@ -362,79 +363,350 @@ h2 {
 .blood-icon-end {
     margin-left: 21px; /* Extra space after the text */
 }
-.upper-footer-container {
-    background: linear-gradient(135deg, rgba(244, 42, 65, 0.8), rgba(0, 36, 62, 0.8)); /* Gradient background */
-    color: white;
-    padding: 50px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-top: 3px solid #ffd700; /* Golden border to highlight the section */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure it covers full screen width */
-    position: relative;
-    z-index: 1; /* Ensure the background is above any other content */
-}
 
-.footer-section {
-    width: 30%;
-    padding: 10px;
+
+
+
+
+
+
+
+
+
+/* General Reset & Body */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin-left: 100px; /* Add this line to move the sections slightly to the right */
 }
 
-.footer-section h4 {
-    font-size: 22px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefefe;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header */
+.page-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #b30000;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.nav-btn {
+    background-color: #e60000;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
     font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
 }
 
-.footer-section ul {
-    list-style: none;
+.nav-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff0f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 80px auto 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input[type="password"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #d40000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #a80000;
+}
+
+/* Blood Requests Section */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: navajowhite;
+}
+
+ul {
+    list-style-type: none;
+    max-width: 700px;
+    margin: 0 auto;
     padding: 0;
 }
 
-.footer-section ul li {
-    margin-bottom: 10px;
+ul li {
+    background-color: #ffe5e5;
+    border-left: 6px solid #d40000;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    line-height: 1.5;
 }
 
-.footer-section ul li a {
+ul li strong {
+    color: #cc0000;
+}
+
+
+
+/* Grid layout for recent blood requests */
+.requests-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Individual request card */
+.request-card {
+    background-color: #ffe5e5;
+    border-left: 6px solid #d40000;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    line-height: 1.6;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 2rem;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+h2 {
+    text-align: center;
+    margin: 70px auto 40px auto;
+    color: navajowhite;
+}
+
+.home-link {
+    color: #337ab7;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #ffd700;
-    transform: translateX(5px); /* Slight movement on hover */
-}
-
-@media (max-width: 768px) {
-    .upper-footer-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 0; /* Add some padding for smaller screens */
-    }
-
-    .footer-section {
-        width: 100%;
-        margin-bottom: 30px;
-        margin-left: 0; /* Reset margin for mobile view */
-    }
-}
-.donor-day-banner a {
-    color: #020202; /* You can choose any color here */
     font-weight: bold;
-    text-decoration: underline;
-    transition: color 0.3s ease;
 }
 
-.donor-day-banner a:hover {
-    color: #000000; /* Optional: color when hovered */
+.home-link:hover {
+    text-decoration: underline;
+}
+
+.donor-list {
+    list-style-type: none;
+    padding: 0;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto 40px auto;
+}
+
+.donor-card {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+body {
+    background-color: #a30000; /* deep red background */
+    font-family: Arial, sans-serif;
+}
+
+.nav-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    background-color: #e60000;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #cc0000;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.form-container {
+    background-color: white;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.form-title {
+    text-align: center;
+    color: #a30000;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-dark {
+    background-color: #a30000;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #cc0000;
+}
+
+.btn-default {
+    background-color: transparent;
+    color: #330099;
+    text-decoration: underline;
+}
+
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.edit-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.edit-link {
+    display: inline-block;
+    margin: 5px;
+    color: #330099;
+    text-decoration: underline;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.dashboard-buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-buttons a:hover {
+    background-color: #555;
 }

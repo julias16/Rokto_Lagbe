@@ -1,37 +1,74 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<!--<h1>Blood Request</h1> <br> <br>-->
-    <a href="{% url 'home' %}">Home</a>
+<h1 class="page-heading">রক্ত লাগবে</h1>
 
-<h2>Request for Blood</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Request Blood</button>
-</form>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<hr>
+<!-- Navigation Bar -->
+<nav class="nav-container">
+    <a href="{% url 'home' %}" class="nav-btn">Home</a>
+    <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
+    <a href="{% url 'signup' %}" class="nav-btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="nav-btn">Login</a>
+    <a href="{% url 'aboutus' %}" class="nav-btn">About Us</a>
+    <a href="{% url 'contactus' %}" class="nav-btn">Contact Us</a>
+    <a href="{% url 'dashboard' %}" class="nav-btn">Dashboard</a>
+</nav>
 
-<h2>Recent Blood Requests</h2>
-<ul>
+<!-- Main Content Starts -->
+<main>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label>Name:</label>
+            {{ form.name }}
+        </p>
+        <p>
+            <label>Blood Group:</label>
+            {{ form.blood_group }}
+        </p>
+        <p>
+            <label>Location:</label>
+            {{ form.location }}
+        </p>
+        <p>
+            <label>Description:</label>
+            {{ form.description }}
+        </p>
+        <p>
+            <label>Phone Number:</label>
+            {{ form.phonenumber }}
+        </p>
+        <button type="submit">Request Blood</button>
+    </form>
+
+    <hr>
+
+    <h2>Recent Blood Requests</h2>
+<ul class="requests-grid">
     {% for request in blood_requests %}
-        <li>
-            Name: {{ request.name }} <br>
+        <li class="request-card">
+            <strong>Name:</strong> {{ request.name }} <br>
             <strong>{{ request.blood_group }}</strong> needed at
             <strong>{{ request.location }}</strong><br>
-            Description: {{ request.description }}<br>
-            Phone Number: {{ request.phonenumber }}<br>
-            Requested at: {{ request.requested_at|date:"M d, Y H:i" }}
+            <strong>Description:</strong> {{ request.description }}<br>
+            <strong>Phone:</strong> {{ request.phonenumber }}<br>
+            <strong>Requested at:</strong> {{ request.requested_at|date:"M d, Y H:i" }}
         </li>
     {% empty %}
         <li>No blood requests yet.</li>
     {% endfor %}
 </ul>
+
+</main>
 
 
 
