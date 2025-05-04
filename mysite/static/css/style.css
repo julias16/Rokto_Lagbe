@@ -710,3 +710,103 @@ body {
 .dashboard-buttons a:hover {
     background-color: #555;
 }
+
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.nav-btn {
+    background-color: #e60000;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #990000;
+    transform: translateY(-2px);
+}
+
+/* Header section */
+.about-header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background-color: #f8f8f8;
+    color: #b30000;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Content section */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content .left {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.about-content h2 {
+    color: #b30000;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1rem;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+    }
+
+    .about-content .left {
+        width: 48%;
+    }
+}

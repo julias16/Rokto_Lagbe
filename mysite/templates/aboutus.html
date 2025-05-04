@@ -1,22 +1,28 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Bank - Home</title>
-  <!-- External CSS -->
+    <title>Title</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <section class="about-header">
-        <h1>About Us</h1>
-        <p>Know about Rokto Lagbe. What, how, and why.</p>
-    </section>
+<nav class="nav-container">
+    <a href="{% url 'home' %}" class="nav-btn">Home</a>
+    <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
+    <a href="{% url 'signup' %}" class="nav-btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="nav-btn">Login</a>
+    <a href="{% url 'aboutus' %}" class="nav-btn">About Us</a>
+    <a href="{% url 'contactus' %}" class="nav-btn">Contact Us</a>
+    <a href="{% url 'dashboard' %}" class="nav-btn">Dashboard</a>
+</nav>
+
 
     <section class="about-content">
         <div class="left">
-            <p>Rokto Lagbe is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website. Rokto is a free service for all. Rokto started its journey in 2018.</p>
+            <h2>Know about Rokto Lagbe - What, How, & Why.</h2>
+            <p>Rokto Lagbe is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website. Rokto Lagbe is a free service for all. Rokto Lagbe started its journey in 2025.</p>
 
             <h2>Why Rokto Lagbe?</h2>
             <p>Though Bangladesh has more than 160 million people, the number of safe blood banks is very few. Without divisional towns, there is hardly any blood bank. But a huge amount of blood is needed for treatment purposes...</p>
