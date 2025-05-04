@@ -1,12 +1,43 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank - Home</title>
+  <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<h1>About Us</h1> <br><br>
+    <section class="about-header">
+        <h1>About Us</h1>
+        <p>Know about Rokto Lagbe. What, how, and why.</p>
+    </section>
 
-  <a href="{% url 'home' %}">Home</a>
+    <section class="about-content">
+        <div class="left">
+            <p>Rokto Lagbe is an automated blood service that connects blood searchers with voluntary blood donors in a moment through SMS and website. Rokto is a free service for all. Rokto started its journey in 2018.</p>
+
+            <h2>Why Rokto Lagbe?</h2>
+            <p>Though Bangladesh has more than 160 million people, the number of safe blood banks is very few. Without divisional towns, there is hardly any blood bank. But a huge amount of blood is needed for treatment purposes...</p>
+            <p>Rokto comes into the scenario to reduce or minimize the communication gap and connects people in a moment using the amazing power of SMS and email...</p>
+        </div>
+
+        <div class="left">
+            <h2>Vision</h2>
+            <p>Ensuring no more death just for the need of blood</p>
+
+            <h2>Mission</h2>
+            <p>Connecting blood searchers with voluntary blood donors in a moment with the use of technology.</p>
+
+            <h2>Objectives</h2>
+            <ul>
+                <li>Encouraging voluntary blood donation</li>
+                <li>Creating awareness about safe blood transfer</li>
+                <li>Enabling people to place blood request via SMS, website, or Facebook</li>
+                <li>Connecting voluntary blood donors via SMS or email</li>
+            </ul>
+        </div>
+    </section>
 </body>
 </html>

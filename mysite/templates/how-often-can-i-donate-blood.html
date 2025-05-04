@@ -1,10 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank - Home</title>
+  <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+  <div class="container">
+    <h1>How often can I donate blood?</h1>
+    <p>Men can give blood every 12 weeks and women can give blood every 16 weeks. Find out more about what happens on the day of your donation.</p>
 
+    <p>The common reasons donors should check if they can give blood are:</p>
+    <ul class="donation-check-list">
+      <li>if you are receiving medical or hospital treatment</li>
+      <li>if you are taking medication</li>
+      <li>during and after pregnancy</li>
+      <li>if you feel ill</li>
+      <li>if you have cancer</li>
+      <li>after receiving blood, blood products, or organs</li>
+      <li>Women under 20 – check if you can give blood.</li>
+    </ul>
+  </div>
 </body>
 </html>
