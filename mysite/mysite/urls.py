@@ -28,6 +28,12 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('searchdonors/', views.searchdonors, name='searchdonors'),
     path('signup/', views.signup, name='signup'),
+    path('different_blood_groups/', views.different_blood_groups, name='different_blood_groups'),
+    path('different_blood_terms/', views.different_blood_terms, name='different_blood_terms'),
+    path('how_often_can_i_donate_blood/', views.how_often_can_i_donate_blood, name='how_often_can_i_donate_blood'),
+
+
+
 
 
     path(' ', include('users.urls')),

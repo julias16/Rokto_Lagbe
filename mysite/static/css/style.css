@@ -612,8 +612,8 @@ body {
 
 .form-container {
     background-color: white;
-    margin-top: 50px;
-    padding: 30px;
+    margin-top: 70px;
+    padding: 50px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -621,7 +621,7 @@ body {
 .form-title {
     text-align: center;
     color: #a30000;
-    margin-bottom: 20px;
+    margin-bottom: -60px;
 }
 
 .form-control {

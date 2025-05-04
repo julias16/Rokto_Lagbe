@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank - Home</title>
   <!-- External CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
     <h1 class="page-heading">রক্ত লাগবে</h1>
@@ -41,22 +41,17 @@
 
 
 
-<div class="donate-info">
-    <h3>WHAT IS BLOOD?</h3>
+<div class="main-content">
+    <h4>WHAT IS BLOOD?</h4>
     <p>Blood is a specialized body fluid. It has four main components: plasma, red blood cells, white blood cells, and platelets. The blood that runs through the veins, arteries, and capillaries is known as whole blood—a mixture of about 55% plasma and 45% blood cells. About 7% to 8% of your total body weight is blood.</p>
 </div>
 
-<div class="blood-request">
-    <!-- Your existing blood request content here -->
-</div>
 
 
-
-
-    <div class="donate-info">
-        <h3>WHO CAN DONATE BLOOD?</h3>
+    <div class="main-content">
+        <h4>WHO CAN DONATE BLOOD?</h4>
         <p>Most people can give blood. You can give blood if you:</p>
-        <ul>
+        <ul class="main-content">
             <li>Are fit and healthy</li>
             <li>Weight between 7 stone 12 lbs and 25 stone, or 50kg and 160kg</li>
             <li>Are aged between 17 and 66 (or 70 if you have given blood before)</li>
@@ -66,8 +61,8 @@
 
 
 
-<div class="donate-info">
-    <h3>SIGNIFICANCE OF DONATING BLOOD</h3>
+<div class="main-content">
+    <h4>SIGNIFICANCE OF DONATING BLOOD</h4>
     <p>Donating blood is significantly important because it's the only way to save lives in a way that can't be replicated. Blood is essential for various medical procedures and treatments, and there's no artificial substitute. It's crucial for managing blood loss in surgeries, trauma, and chronic illnesses like cancer, ensuring a consistent supply of blood products for patients. Donating blood also has potential health benefits for the donor, including a reduced risk of heart disease and cancer. </p>
 </div>
 
@@ -82,34 +77,27 @@
     <div class="footer-section">
         <h4>রক্ত লাগবে</h4>
         <p>Our mission is to provide emergency<br>Blood service to the people to save life.</p>
-<!--        <ul>-->
-<!--            <li><a href="#">Our Mission</a></li>-->
-<!--            <li><a href="#">Donate Blood</a></li>-->
-<!--            <li><a href="#">Become a Volunteer</a></li>-->
-<!--            <li><a href="#">Contact Us</a></li>-->
-<!--        </ul>-->
     </div>
     <div class="footer-section">
         <h4>Important Links</h4>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blood Requests</a></li>
-            <li><a href="#">Search Donors</a></li>
-            <li><a href="#">About Us</a></li>
-             <li><a href="#">Dashboard</a></li>
-             <li><a href="#">Log in</a></li>
+            <li><a href="{% url 'searchdonors' %}" >Search Donors</a></li>
+            <li><a href="{% url 'bloodreq' %}" >Blood Request</a></li>
+            <li><a href="{% url 'signup' %}" >Sign Up</a></li>
+            <li><a href="{% url 'login' %}" >Login</a></li>
+            <li><a href="{% url 'aboutus' %}" >About Us</a></li>
+            <li><a href="{% url 'contactus' %}" >Contact Us</a></li>
         </ul>
     </div>
     <div class="footer-section">
         <h4>About Blood</h4>
         <ul>
             <li><a href="#">What is Blood?</a></li>
-            <li><a href="#">What is Blood donation?</a></li>
-            <li><a href="#">Who Can Donate Blood?</a></li>
-            <li><a href="#">How often I Can Donate Blood?</a></li>
-            <li><a href="#">Different Blood terms</a></li>
-            <li><a href="#">Different Blood groups</a></li>
-<!--            <li><a href="#">Safety Guidelines</a></li>-->
+            <li><a href="#">What is blood donation?</a></li>
+            <li><a href="#">Who Can Donate blood?</a></li>
+            <li><a href="{% url 'how_often_can_i_donate_blood' %}">How often I Can Donate blood?</a></li>
+            <li><a href="{% url 'different_blood_terms' %}">Different Blood terms</a></li>
+            <li><a href="{% url 'different_blood_groups' %}">Different Blood groups</a></li>
         </ul>
     </div>
 </div>
@@ -120,8 +108,8 @@
 <div>
 
     <footer class="footer">
-        <p>Need help? Contact us at <a href="mailto:support@bloodbank.com">রক্ত_লাগবে@bloodbank.com</a></p>
-        <p>&copy; 2025 Blood Bank Project</p>
+        <p>Need help? Contact us at <a href="{% url 'contactus' %}">Rokto Lagbe</a></p>
+        <p>&copy; Rokto Lagbe | 2025</p>
     </footer>
 
 </div>

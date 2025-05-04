@@ -23,3 +23,12 @@ def bloodreq(request):
 def searchdonors(request):
     users = User.objects.all()
     return render(request, 'searchdonors.html', {'users': users})
+
+def different_blood_groups(request):
+    return render(request, 'different blood groups.html')
+
+def different_blood_terms(request):
+    return render(request, 'different blood terms.html')
+
+def how_often_can_i_donate_blood(request):
+    return render(request, 'how-often-can-i-donate-blood.html')
