@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav class="nav-container">
+    <a href="{% url 'home' %}" class="nav-btn">Home</a>
+    <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
+    <a href="{% url 'bloodreq' %}" class="nav-btn">Blood Request</a>
+    <a href="{% url 'signup' %}" class="nav-btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="nav-btn">Login</a>
+    <a href="{% url 'aboutus' %}" class="nav-btn">About Us</a>
+    <a href="{% url 'contactus' %}" class="nav-btn">Contact Us</a>
+    <a href="{% url 'dashboard' %}" class="nav-btn">Dashboard</a>
+</nav>
+
+<div class="row justify-content-center">
+    <div class="col-sm-6 form-container">
+        <h3 class="form-title">Profile Information</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <span class="text-danger">{{ field.errors }}</span>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+
+        {% if users %}
+        <div class="edit-links">
+            <h4>Edit Profiles:</h4>
+            {% for i in users %}
+                <a href="{% url 'edit_profile' i.id %}" class="edit-link">Edit {{ i.username }}</a><br>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

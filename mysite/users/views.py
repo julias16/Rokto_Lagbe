@@ -2,11 +2,16 @@ from django.shortcuts import render, redirect
 from .models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
-
-
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
+from django.contrib.auth import login, logout
+from .middlewares import auth, guest
+from django.shortcuts import render, redirect
+from .forms import UserForm, UpdateForm
 from .forms import BloodRequestForm
 from .models import BloodRequest
 
+@auth
 def blood_request_view(request):
     if request.method == 'POST':
         form = BloodRequestForm(request.POST)
@@ -21,28 +26,6 @@ def blood_request_view(request):
     return render(request, 'bloodreq.html', {'form': form, 'blood_requests': blood_requests})
 
 
-
-# from django.shortcuts import render, redirect
-# from .forms import UserForm
-#
-# def signup_view(request):
-#     if request.method == 'POST':
-#         form = UserForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('home')  # Redirect to the product list page after successful creation
-#     else:
-#         form = UserForm()
-#     return render(request, 'signup.html', {'form': form})
-
-
-
-
-from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
-from django.contrib.auth import login, logout
-from .middlewares import auth, guest
-# Create your views here.
 
 @guest
 def signup_view(request):
@@ -75,9 +58,50 @@ def login_view(request):
 
 @auth
 def dashboard_view(request):
-    return render(request, 'dashboard.html')
+    users = User.objects.all()
+    return render(request, 'dashboard.html', {'users':users})
 
 
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+
+
+# def create_profile(request):
+#     if request.method == 'POST':
+#         form = UserForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('dashboard')  # Redirect to the product list page after successful creation
+#     else:
+#         form = UserForm()
+#     return render(request, 'create_profile.html', {'form': form})
+
+def create_profile(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = UserForm()
+    return render(request, 'create_profile.html', {'form': form})
+
+
+def edit_profile(request, id):
+    users = User.objects.get(pk=id)
+    if request.method == 'POST':
+        form = UpdateForm(request.POST, instance=users)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')  # Redirect to the product list page after successful update
+    else:
+        form = UpdateForm(instance=users)
+    return render(request, 'create_profile.html', {'form': form})
+
+
+def search_donors(request):
+    donors = User.objects.filter(usertype='Donor')
+    return render(request, 'search_donors.html', {'donors': donors})
+

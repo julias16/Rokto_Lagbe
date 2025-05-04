@@ -16,3 +16,7 @@ class BloodRequestForm(forms.ModelForm):
         fields = '__all__'
 
 
+class UpdateForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = {'name','email', 'phonenumber', 'location'}
