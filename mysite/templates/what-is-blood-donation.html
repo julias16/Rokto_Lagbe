@@ -1,21 +1,22 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>What is Blood Donation</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f2f9ff;
-            padding: 20px;
-        }
+         body {
+         background: url("{% static 'images/—Pngtree—world blood donor day background_1742555.png' %}") no-repeat center center fixed;
+    background-size: cover;
 
         h1 {
-            color: #990000;
+            color: wheat;
         }
 
         p {
-            color: #333333;
+            color: white;
         }
 
         ul {
@@ -30,11 +31,11 @@
         }
 
         li strong {
-            color: #006699;
+            color: #ff0000;
         }
 
         .highlight {
-            color: #cc5500;
+            color: #ffffff;
             font-weight: bold;
         }
     </style>

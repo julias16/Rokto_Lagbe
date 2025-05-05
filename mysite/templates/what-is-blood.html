@@ -1,26 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>What is Blood?</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     <style>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            padding: 20px;
-        }
+     body {
+    background: url("{% static 'images/—Pngtree—world blood donor day background_1742555.png' %}") no-repeat center center fixed;
+    background-size: cover;
+}
+
 
         h1 {
-            color: #b30000;
+            color: wheat;
         }
 
         p {
-            color: #333333;
+            color:white;
         }
 
         ul {
-            background-color: #fff0f0;
+            background-image: #fff0f0;
             padding: 15px;
             border-radius: 10px;
         }
@@ -31,16 +33,17 @@
         }
 
         li strong {
-            color: #0077cc;
+            color: #040404;
         }
 
         .highlight {
-            color: #cc6600;
+            color: #ffffff;
             font-weight: bold;
         }
-    </style>
+        <img src="../static/images/—Pngtree—world blood donor day background_1742555.png" height="2335" width="4002"/></style>
 </head>
 <body>
+
     <h1>What is blood?</h1>
 
     <p><span class="highlight">Blood</span> is a constantly circulating fluid providing the body with <span class="highlight">nutrition</span>, <span class="highlight">oxygen</span>, and <span class="highlight">waste removal</span>. Blood is mostly liquid, with numerous cells and proteins suspended in it, making blood “thicker” than pure water. The average person has about <span class="highlight">5 liters</span> (more than a gallon) of blood.</p>

@@ -1,21 +1,22 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Who Can Donate Blood?</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #fdf6f0;
-            padding: 20px;
+            background: url("{% static 'images/—Pngtree—world blood donor day background_1742555.png' %}") no-repeat center center fixed;
+    background-size: cover;
         }
 
         h1 {
-            color: #8b0000;
+            color: wheat;
         }
 
         p {
-            color: #333333;
+            color: #ffffff;
         }
 
         ul {
@@ -27,11 +28,11 @@
         li {
             margin-bottom: 8px;
             font-weight: bold;
-            color: #cc6600;
+            color: #000000;
         }
 
         .highlight {
-            color: #d2691e;
+            color: #000000;
             font-weight: bold;
         }
     </style>
