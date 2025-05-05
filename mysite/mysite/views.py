@@ -32,3 +32,12 @@ def different_blood_terms(request):
 
 def how_often_can_i_donate_blood(request):
     return render(request, 'how-often-can-i-donate-blood.html')
+
+def what_is_blood(request):
+    return render(request, 'what-is-blood.html')
+
+def what_is_blood_donation(request):
+    return render(request, 'what-is-blood-donation.html')
+
+def who_can_donate_blood(request):
+    return render(request, 'who-can-donate-blood.html')

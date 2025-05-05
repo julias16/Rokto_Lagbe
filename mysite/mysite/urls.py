@@ -31,6 +31,10 @@ urlpatterns = [
     path('different_blood_groups/', views.different_blood_groups, name='different_blood_groups'),
     path('different_blood_terms/', views.different_blood_terms, name='different_blood_terms'),
     path('how_often_can_i_donate_blood/', views.how_often_can_i_donate_blood, name='how_often_can_i_donate_blood'),
+    path('what_is_blood/', views.what_is_blood, name='what_is_blood'),
+    path('what_is_blood_donation/', views.what_is_blood_donation, name='what_is_blood_donation'),
+    path('who_can_donate_blood/', views.who_can_donate_blood, name='who_can_donate_blood'),
+
 
 
 

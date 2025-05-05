@@ -1,0 +1,116 @@
+body {
+     margin: 0;
+     font-family: 'Segoe UI', sans-serif;
+     background: url('../images/—Pngtree—world blood donor day background_1742555.png') no-repeat center center fixed;
+     background-size: cover;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+     padding-bottom: 50px;
+ }
+
+ .page-heading {
+     position: absolute;
+     top: 20px;
+     left: 30px;
+     font-size: 32px;
+     color: whitesmoke;
+     font-weight: bold;
+ }
+
+ .nav-container {
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+ }
+
+ .nav-btn {
+     padding: 10px 20px;
+     background-color: #f40909;
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+     border-radius: 8px;
+     transition: background 0.3s ease;
+     font-size: 16px;
+ }
+
+form {
+    background-color: #fff0f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 80px auto 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input[type="password"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #d40000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #a80000;
+}
+
+.logo-heading {
+    height: 40px;
+    width: 40px;
+}
+
+h2 {
+    text-align: center;
+    margin: 70px auto 40px auto;
+    color: navajowhite;
+}
+
+
+.form-con input, .form-con select, .form-con textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}

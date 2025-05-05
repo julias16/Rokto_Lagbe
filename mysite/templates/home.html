@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Bank - Home</title>
+    <title>Rokto Lagbe</title>
   <!-- External CSS -->
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
@@ -32,7 +32,7 @@
 
         <h2>
              <span class="donor-icon">🩸</span>
-            Welcome to Our Blood Bank
+            Welcome to Rokto Lagbe
              <span class="donor-icon">🩸</span>
         </h2>
 
@@ -40,6 +40,7 @@
 
         <p>Find Life Saving Blood Donors Easily. Join Us To Save Lives and be a Hero!</p>
     </div>
+
 
 
 
@@ -70,8 +71,7 @@
 </div>
 
 
-
-    <div class="main-content" style="text-align: center; margin-top: 40px;">
+     <div class="main-content" style="text-align: center; margin-top: 40px;">
     <h4>BLOOD TYPE COMPATIBILITY</h4>
     <p>
         A blood type is a classification of blood based on the presence or absence of antigens on the surface of red blood cells.
@@ -82,7 +82,7 @@
         <thead>
             <tr>
                 <th rowspan="2">If you are type</th>
-                <th colspan="8">You can receive type</th>
+                <th colspan="8">You can receive or give</th>
             </tr>
             <tr>
                 <th>O+</th><th>O−</th><th>A+</th><th>A−</th><th>B+</th><th>B−</th><th>AB+</th><th>AB−</th>
@@ -114,23 +114,12 @@
 
 
 
-
-
 <div class="donor-day-banner">
     <span class="donor-icon">🩸</span>
     WORLD BLOOD DONOR DAY | 14 JUNE  <span class="donor-icon">🩸</span> <br>
     <a href="https://www.who.int/campaigns/world-blood-donor-day">Learn More</a>
 
-
-
-
-
 </div>
-
-
-
-
-
 
     <div class="upper-footer-container">
     <div class="footer-section">
@@ -151,17 +140,14 @@
     <div class="footer-section">
         <h4>About Blood</h4>
         <ul>
-            <li><a href="#">What is Blood?</a></li>
-            <li><a href="#">What is blood donation?</a></li>
-            <li><a href="#">Who Can Donate blood?</a></li>
+            <li><a href="{% url 'what_is_blood' %}">What is Blood?</a></li>
+            <li><a href="{% url 'what_is_blood_donation' %}">What is blood donation?</a></li>
+            <li><a href="{% url 'who_can_donate_blood' %}">Who Can Donate blood?</a></li>
             <li><a href="{% url 'how_often_can_i_donate_blood' %}">How often I Can Donate blood?</a></li>
             <li><a href="{% url 'different_blood_terms' %}">Different Blood terms</a></li>
             <li><a href="{% url 'different_blood_groups' %}">Different Blood groups</a></li>
         </ul>
     </div>
-
-
-
 </div>
 
 
