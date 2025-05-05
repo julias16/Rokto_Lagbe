@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <h1 class="page-heading">
-      <img src="../static/images/Rokto Lagbe logo.png" height="120" width="120"/>
+      <a href="{% url 'home' %}"><img src="../static/images/Rokto Lagbe logo.png" height="120" width="120"/></a>
 </h1>
 <nav class="nav-container">
     <a href="{% url 'home' %}" class="nav-btn">Home</a>
     <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
     <a href="{% url 'bloodreq' %}" class="nav-btn">Blood Request</a>
     <a href="{% url 'signup' %}" class="nav-btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="nav-btn">Login</a>
     <a href="{% url 'aboutus' %}" class="nav-btn">About Us</a>
     <a href="{% url 'contactus' %}" class="nav-btn">Contact Us</a>
     <a href="{% url 'dashboard' %}" class="nav-btn">Dashboard</a>

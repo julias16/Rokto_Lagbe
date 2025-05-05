@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
+<h1 class="page-heading">
+      <a href="{% url 'home' %}"><img src="../static/images/Rokto Lagbe logo.png" height="120" width="120"/></a>
+</h1>
 <nav class="nav-container">
     <a href="{% url 'home' %}" class="nav-btn">Home</a>
     <a href="{% url 'searchdonors' %}" class="nav-btn">Search Donors</a>
@@ -20,8 +22,8 @@
 </nav>
 
 <div class="row justify-content-center">
-    <div class="col-sm-6 form-container">
-        <h3 class="form-title">Profile Information</h3>
+    <div class="col-sm-6">
+        <h2>Profile Information</h2>
 
         <form method="post">
             {% csrf_token %}
