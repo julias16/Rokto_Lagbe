@@ -461,3 +461,47 @@ body {
  .donor-day-banner a:hover {
      color: #000000; /* Optional: color when hovered */
  }
+
+ /* ===== Blood Type Compatibility Table Styles ===== */
+.main-content table {
+    width: 100%;
+    max-width: 900px;          /* সর্বোচ্চ প্রস্থ */
+    margin: 30px auto;         /* সেন্টারে অ্যালাইন্ড */
+    border-collapse: collapse;  /* একত্রিত বর্ডার */
+}
+
+.main-content table th,
+.main-content table td {
+    border: 1px solid #f42a41; /* রক্তের রঙের বর্ডার */
+    padding: 12px 8px;         /* কোষের ভিতরে স্পেস */
+    text-align: center;
+    font-size: 18px;
+    color: whitesmoke;         /* টেক্সট রঙ */
+}
+
+.main-content table thead th {
+    background-color: #f60e30; /* হেডারের ব্যাকগ্রাউন্ড */
+    color: #fff;               /* হেডার টেক্সট রঙ */
+    font-size: 20px;
+}
+
+.main-content table tbody th {
+    background-color: #f60e30; /* প্রথম কলামের ব্যাকগ্রাউন্ড */
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-content table tbody tr:nth-child(even) td {
+    background-color: rgba(255,255,255,0.1); /* সাপোর্টিং রো জালে হালকা শেড */
+}
+
+@media (max-width: 600px) {
+    .main-content table,
+    .main-content table th,
+    .main-content table td {
+        font-size: 14px;     /* মোবাইলে ফন্ট ছোট করবে */
+        padding: 8px 4px;
+    }
+}
+
+
