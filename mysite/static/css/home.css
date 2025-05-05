@@ -1,0 +1,511 @@
+body {
+     margin: 0;
+     font-family: 'Segoe UI', sans-serif;
+     background: url('../images/—Pngtree—world blood donor day background_1742555.png') no-repeat center center fixed;
+     background-size: cover;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+     padding-bottom: 50px;
+ }
+
+ .page-heading {
+     position: absolute;
+     top: 20px;
+     left: 30px;
+     font-size: 32px;
+     color: whitesmoke;
+     font-weight: bold;
+ }
+
+ .nav-container {
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+ }
+
+ .nav-btn {
+     padding: 10px 20px;
+     background-color: #f40909;
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+     border-radius: 8px;
+     transition: background 0.3s ease;
+     font-size: 16px;
+ }
+
+ .nav-btn:hover {
+     background-color: #d92636;
+ }
+ .main-content {
+     margin-top: 30px; /* Decrease this value to move it upwards */
+     text-align: center;
+     background-color: transparent;
+     padding: 50px;
+     width: 85%;
+     max-width: 700px;
+
+     animation: fadeIn 1.5s ease-in-out;
+     transform: translateX(-10px);
+     border: none;
+     border-radius: 0;
+ }
+
+
+
+
+
+
+
+ @keyframes fadeIn {
+     0% {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .main-content h2 {
+     color: wheat;
+     margin-bottom: 20px;
+     font-size: 40px;
+     font-weight: bold;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+
+ }
+
+  .main-content h4 {
+     color: wheat;
+     margin-bottom: 20px;
+     font-size: 40px;
+     font-weight: bold;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+
+ }
+
+ .main-content p {
+     color: whitesmoke;
+     font-size: 18px;
+     line-height: 1.6;
+     font-weight: 500;
+
+ }
+
+  .main-content li {
+     color: whitesmoke;
+     font-size: 18px;
+     line-height: 1.6;
+     font-weight: 500;
+      text-align: left;
+ }
+
+ .left-quote {
+     position: absolute;
+     top: 250px;
+     left: 40px;
+     width: 320px;
+     font-size: 24px;
+     font-weight: bold;
+     font-style: italic;
+     color: navajowhite;
+     line-height: 1.5;
+     animation: fadeIn 2s ease-in-out;
+ }
+
+ .quote-underline {
+     margin-top: 10px;
+     width: 300px; /* Width of the underline */
+     height: 4px;  /* Thickness of the underline */
+     background-color: #db2a2a; /* Same blood red color */
+     border-radius: 2px; /* Slightly rounded edges */
+     animation: slideIn 1s ease-out;
+ }
+
+ /* Optional: Smooth slide-in animation for underline */
+ @keyframes slideIn {
+     from {
+         width: 0;
+         opacity: 0;
+     }
+     to {
+         width: 100px;
+         opacity: 1;
+     }
+ }
+
+
+
+ /* Blood Icon Section */
+ /* .blood-icon {
+     margin-top: 50px;
+     text-align: center;
+     animation: fadeIn 3s ease-in-out;
+ } */
+
+ /* .blood-img {
+     width: 150px;
+     height: auto;
+     animation: bounce 2s infinite; /* Adding some bounce animation */
+
+
+ /* Bounce Animation */
+ /* @keyframes bounce {
+     0%, 100% {
+         transform: translateY(0);
+     }
+     50% {
+         transform: translateY(-20px);
+     }
+ } */
+
+ /* Footer */
+ .footer {
+     margin-top: auto;
+     background-color: rgba(255, 255, 255, 0.8);
+     text-align: center;
+     padding: 20px;
+     width: 100%;
+     position: relative;
+     bottom: 0;
+     font-size: 14px;
+ }
+
+ .footer a {
+     color: #f42a41;
+     text-decoration: underline;
+ }
+
+ /* Make it mobile responsive */
+ @media (max-width: 600px) {
+     .nav-container {
+         flex-direction: column;
+         align-items: flex-end;
+     }
+
+     .main-content {
+         margin-top: 150px;
+         padding: 20px;
+     }
+
+     .main-content h2 {
+         font-size: 30px;
+     }
+
+     .main-content p {
+         font-size: 16px;
+     }
+ }
+ .section {
+     margin-top: 60px;
+     text-align: center;
+     padding: 40px 20px;
+     color: #000;
+     animation: fadeIn 2s ease-in-out;
+ }
+
+ .search-btn, .request-btn, .contact-btn {
+     margin-top: 20px;
+     padding: 12px 30px;
+     background-color: #f42a41;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background 0.3s ease;
+ }
+
+ .search-btn:hover, .request-btn:hover, .contact-btn:hover {
+     background-color: #d92636;
+ }
+ .search-form {
+     margin-top: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .search-form label {
+     margin-top: 15px;
+     font-weight: bold;
+     color: #333;
+ }
+
+ .search-form select {
+     margin-top: 5px;
+     padding: 10px;
+     width: 250px;
+     border-radius: 8px;
+     border: 1px solid #ccc;
+     font-size: 16px;
+ }
+
+ .search-form .search-btn {
+     margin-top: 20px;
+ }
+ /* Flex container for both sections */
+ .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     padding: 20px; /* Add padding around */
+     margin: 0 auto; /* Center the content in the page */
+     max-width: 1200px; /* Set a max width for better alignment */
+ }
+
+ .donate-info {
+     position: relative;
+     left: -400px;
+     width: 40%;
+     max-width: 800px;
+     margin: 0 auto;
+     font-size: 18px;
+     line-height: 1.6;
+     padding: 15px;
+     text-align: center;
+     animation: fadeIn 2s ease-in-out;
+ }
+
+
+
+
+ .donate-info h3 {
+     text-align: center;
+     font-size: 24px;
+     font-weight: bold;
+     color: ghostwhite;
+     margin-bottom: 10px;
+ }
+
+ .donate-info p {
+     color: papayawhip;
+     text-align: center;
+ }
+
+ .blood-request {
+     width: 48%; /* Adjusted width for better fit */
+     padding: 15px;
+     /* background-color: #f8f8f8; */
+     /* border-radius: 8px; */
+     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+ }
+
+ /* Responsive design adjustments for smaller screens */
+ @media (max-width: 768px) {
+     .container {
+         flex-direction: column; /* Stack sections on smaller screens */
+     }
+
+     .donate-info, .blood-request {
+         width: 100%; /* Full width for each section */
+         margin-bottom: 20px; /* Add spacing between stacked sections */
+     }
+ }
+ .donate-info ul {
+     text-align: left;
+     padding-left: 20px;
+     margin-top: 10px;
+ }
+
+ .donate-info ul li {
+     margin-bottom: 10px;
+     font-size: 16px;
+     color: navajowhite;
+ }
+ .donor-day-banner {
+     background-color: #f42a41;
+     color: white;
+     padding: 25px 30px;
+     font-size: 28px;
+     font-weight: 900;
+     text-align: center;
+     border-radius: 16px;
+     margin-bottom: 25px;
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     line-height: 1.4;
+     width: 90%;
+     max-width: 1000px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .donor-day-banner .donor-icon {
+     font-size: 34px;
+     margin-right: 12px;
+     vertical-align: middle;
+ }
+ @keyframes pulse {
+     0% {
+         transform: scale(1);
+         box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+     }
+     70% {
+         transform: scale(1.03);
+         box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+     }
+     100% {
+         transform: scale(1);
+         box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+     }
+ }
+
+ .donor-day-banner {
+     animation: pulse 3s infinite;
+ }
+ h2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     white-space: nowrap; /* Prevents wrapping */
+ }
+
+ .blood-icon-start, .blood-icon-end {
+     color: #e60000;
+     font-size: 36px;
+     margin: 0 10px;
+ }
+
+ .blood-icon-start {
+     margin-right: 20px; /* Extra space before the text */
+ }
+
+ .blood-icon-end {
+     margin-left: 20px; /* Extra space after the text */
+ }
+ .upper-footer-container {
+     background: linear-gradient(135deg, rgba(244, 42, 65, 0.8), rgba(0, 36, 62, 0.8)); /* Gradient background */
+     color: white;
+     padding: 50px 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     border-top: 3px solid #ffd700; /* Golden border to highlight the section */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     width: 100%; /* Ensure it covers full screen width */
+     position: relative;
+     z-index: 1; /* Ensure the background is above any other content */
+ }
+
+ .footer-section {
+     width: 30%;
+     padding: 10px;
+     box-sizing: border-box;
+     margin-left: 100px; /* Add this line to move the sections slightly to the right */
+ }
+
+ .footer-section h4 {
+     font-size: 22px;
+     font-weight: bold;
+     margin-bottom: 15px;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     color: #fff;
+     font-family: 'Arial', sans-serif;
+ }
+
+ .footer-section ul {
+     list-style: none;
+     padding: 0;
+ }
+
+ .footer-section ul li {
+     margin-bottom: 10px;
+ }
+
+ .footer-section ul li a {
+     text-decoration: none;
+     color: white;
+     font-size: 16px;
+     font-weight: 400;
+     transition: color 0.3s ease, transform 0.3s ease;
+ }
+
+ .footer-section ul li a:hover {
+     color: #ffd700;
+     transform: translateX(5px); /* Slight movement on hover */
+ }
+
+ @media (max-width: 768px) {
+     .upper-footer-container {
+         flex-direction: column;
+         align-items: center;
+         padding: 30px 0; /* Add some padding for smaller screens */
+     }
+
+     .footer-section {
+         width: 100%;
+         margin-bottom: 30px;
+         margin-left: 0; /* Reset margin for mobile view */
+     }
+ }
+ .donor-day-banner a {
+     color: #020202; /* You can choose any color here */
+     font-weight: bold;
+     text-decoration: underline;
+     transition: color 0.3s ease;
+ }
+
+ .donor-day-banner a:hover {
+     color: #000000; /* Optional: color when hovered */
+ }
+
+ /* ===== Blood Type Compatibility Table Styles ===== */
+.main-content table {
+    width: 100%;
+    max-width: 900px;          /* সর্বোচ্চ প্রস্থ */
+    margin: 30px auto;         /* সেন্টারে অ্যালাইন্ড */
+    border-collapse: collapse;  /* একত্রিত বর্ডার */
+}
+
+.main-content table th,
+.main-content table td {
+    border: 1px solid #f42a41; /* রক্তের রঙের বর্ডার */
+    padding: 12px 8px;         /* কোষের ভিতরে স্পেস */
+    text-align: center;
+    font-size: 18px;
+    color: whitesmoke;         /* টেক্সট রঙ */
+}
+
+.main-content table thead th {
+    background-color: #f60e30; /* হেডারের ব্যাকগ্রাউন্ড */
+    color: #fff;               /* হেডার টেক্সট রঙ */
+    font-size: 20px;
+}
+
+.main-content table tbody th {
+    background-color: #f60e30; /* প্রথম কলামের ব্যাকগ্রাউন্ড */
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-content table tbody tr:nth-child(even) td {
+    background-color: rgba(255,255,255,0.1); /* সাপোর্টিং রো জালে হালকা শেড */
+}
+
+@media (max-width: 600px) {
+    .main-content table,
+    .main-content table th,
+    .main-content table td {
+        font-size: 14px;     /* মোবাইলে ফন্ট ছোট করবে */
+        padding: 8px 4px;
+    }
+}
+
+
+.logo-heading {
+    height: 60px; /* ইমেজের উচ্চতা, প্রয়োজন অনুযায়ী পরিবর্তন করুন */
+    width: auto;  /* প্রোপোরশন বজায় রাখতে */
+}

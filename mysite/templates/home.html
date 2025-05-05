@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank - Home</title>
   <!-- External CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
-    <h1 class="page-heading">রক্ত লাগবে</h1>
+ <h1 class="page-heading">
+      <img src="../static/images/Rokto Lagbe logo.png" height="120" width="120"/>
+</h1>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
@@ -28,9 +31,9 @@
     <div class="main-content">
 
         <h2>
-            <i class="fas fa-tint blood-icon-start"></i>
+             <span class="donor-icon">🩸</span>
             Welcome to Our Blood Bank
-            <i class="fas fa-tint blood-icon-end"></i>
+             <span class="donor-icon">🩸</span>
         </h2>
 
 
@@ -41,22 +44,17 @@
 
 
 
-<div class="donate-info">
-    <h3>WHAT IS BLOOD?</h3>
+<div class="main-content">
+    <h4>WHAT IS BLOOD?</h4>
     <p>Blood is a specialized body fluid. It has four main components: plasma, red blood cells, white blood cells, and platelets. The blood that runs through the veins, arteries, and capillaries is known as whole blood—a mixture of about 55% plasma and 45% blood cells. About 7% to 8% of your total body weight is blood.</p>
 </div>
 
-<div class="blood-request">
-    <!-- Your existing blood request content here -->
-</div>
 
 
-
-
-    <div class="donate-info">
-        <h3>WHO CAN DONATE BLOOD?</h3>
+    <div class="main-content">
+        <h4>WHO CAN DONATE BLOOD?</h4>
         <p>Most people can give blood. You can give blood if you:</p>
-        <ul>
+        <ul class="main-content">
             <li>Are fit and healthy</li>
             <li>Weight between 7 stone 12 lbs and 25 stone, or 50kg and 160kg</li>
             <li>Are aged between 17 and 66 (or 70 if you have given blood before)</li>
@@ -66,38 +64,88 @@
 
 
 
-<div class="donate-info">
-    <h3>SIGNIFICANCE OF DONATING BLOOD</h3>
+<div class="main-content">
+    <h4>SIGNIFICANCE OF DONATING BLOOD</h4>
     <p>Donating blood is significantly important because it's the only way to save lives in a way that can't be replicated. Blood is essential for various medical procedures and treatments, and there's no artificial substitute. It's crucial for managing blood loss in surgeries, trauma, and chronic illnesses like cancer, ensuring a consistent supply of blood products for patients. Donating blood also has potential health benefits for the donor, including a reduced risk of heart disease and cancer. </p>
 </div>
+
+
+
+    <div class="main-content" style="text-align: center; margin-top: 40px;">
+    <h4>BLOOD TYPE COMPATIBILITY</h4>
+    <p>
+        A blood type is a classification of blood based on the presence or absence of antigens on the surface of red blood cells.
+        Human blood is divided into one of four main blood types: A, B, AB, and O, and is further divided into Rh+ or Rh−.
+    </p>
+
+    <table border="1" style="margin: 0 auto; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th rowspan="2">If you are type</th>
+                <th colspan="8">You can receive type</th>
+            </tr>
+            <tr>
+                <th>O+</th><th>O−</th><th>A+</th><th>A−</th><th>B+</th><th>B−</th><th>AB+</th><th>AB−</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><th>O+</th><td>🩸</td><td>🩸</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><th>O−</th><td></td><td>🩸</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><th>A+</th><td>🩸</td><td>🩸</td><td>🩸</td><td>🩸</td><td></td><td></td><td></td><td></td></tr>
+            <tr><th>A−</th><td></td><td>🩸</td><td></td><td>🩸</td><td></td><td></td><td></td><td></td></tr>
+            <tr><th>B+</th><td>🩸</td><td>🩸</td><td></td><td></td><td>🩸</td><td>🩸</td><td></td><td></td></tr>
+            <tr><th>B−</th><td></td><td>🩸</td><td></td><td></td><td></td><td>🩸</td><td></td><td></td></tr>
+            <tr><th>AB+</th><td>🩸</td><td>🩸</td><td>🩸</td><td>🩸</td><td>🩸</td><td>🩸</td><td>🩸</td><td>🩸</td></tr>
+            <tr><th>AB−</th><td></td><td>🩸</td><td></td><td>🩸</td><td></td><td>🩸</td><td></td><td>🩸</td></tr>
+        </tbody>
+    </table>
+
+
+
+
+</div>
+
+
+
+<div class="main-content">
+    <h4>WHEN TO AVOID</h4>
+    <p>You should avoid giving blood if you have an active infection, are currently sick, have taken certain medications, or have certain medical conditions. If you have a cold, flu, sore throat, or any other infection, you should wait until you are fully recovered and symptom-free before donating. Additionally, if you have a fever, a temperature above 99.5°F, or have recently had a blood transfusion or organ transplant, you should also wait before donating.  </p>
+</div>
+
+
+
+
 
 <div class="donor-day-banner">
     <span class="donor-icon">🩸</span>
     WORLD BLOOD DONOR DAY | 14 JUNE  <span class="donor-icon">🩸</span> <br>
     <a href="https://www.who.int/campaigns/world-blood-donor-day">Learn More</a>
 
+
+
+
+
 </div>
+
+
+
+
+
 
     <div class="upper-footer-container">
     <div class="footer-section">
         <h4>রক্ত লাগবে</h4>
         <p>Our mission is to provide emergency<br>Blood service to the people to save life.</p>
-<!--        <ul>-->
-<!--            <li><a href="#">Our Mission</a></li>-->
-<!--            <li><a href="#">Donate Blood</a></li>-->
-<!--            <li><a href="#">Become a Volunteer</a></li>-->
-<!--            <li><a href="#">Contact Us</a></li>-->
-<!--        </ul>-->
     </div>
     <div class="footer-section">
         <h4>Important Links</h4>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blood Requests</a></li>
-            <li><a href="#">Search Donors</a></li>
-            <li><a href="#">About Us</a></li>
-             <li><a href="#">Dashboard</a></li>
-             <li><a href="#">Log in</a></li>
+            <li><a href="{% url 'searchdonors' %}" >Search Donors</a></li>
+            <li><a href="{% url 'bloodreq' %}" >Blood Request</a></li>
+            <li><a href="{% url 'signup' %}" >Sign Up</a></li>
+            <li><a href="{% url 'login' %}" >Login</a></li>
+            <li><a href="{% url 'aboutus' %}" >About Us</a></li>
+            <li><a href="{% url 'contactus' %}" >Contact Us</a></li>
         </ul>
     </div>
     <div class="footer-section">
@@ -106,22 +154,24 @@
             <li><a href="#">What is Blood?</a></li>
             <li><a href="#">What is blood donation?</a></li>
             <li><a href="#">Who Can Donate blood?</a></li>
-            <li><a href="#">How often I Can Donate blood?</a></li>
-            <li><a href="#">Different Blood terms</a></li>
-            <li><a href="#">Different Blood groups</a></li>
-<!--            <li><a href="#">Safety Guidelines</a></li>-->
+            <li><a href="{% url 'how_often_can_i_donate_blood' %}">How often I Can Donate blood?</a></li>
+            <li><a href="{% url 'different_blood_terms' %}">Different Blood terms</a></li>
+            <li><a href="{% url 'different_blood_groups' %}">Different Blood groups</a></li>
         </ul>
     </div>
+
+
+
 </div>
 
 
 
 
-<div
+<div>
 
     <footer class="footer">
-        <p>Need help? Contact us at <a href="mailto:support@bloodbank.com">রক্ত_লাগবে@bloodbank.com</a></p>
-        <p>&copy; 2025 Blood Bank Project</p>
+        <p>Need help? Contact us at <a href="{% url 'contactus' %}">Rokto Lagbe</a></p>
+        <p>&copy; Rokto Lagbe | 2025</p>
     </footer>
 
 </div>
